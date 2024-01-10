@@ -1,10 +1,10 @@
 import React from 'react';
-import Weather from './weather';
+import Weather from './weather.js';
 
 const App = () => {
   return (
     <div>
-      <h1>Weather Forecast App</h1>
+      <h1>Before_u_go!</h1>
       <Weather />
     </div>
   );

@@ -8,7 +8,7 @@ const Weather = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid={dc4cf4dd5ad08d7d08091d8319d2e896}`
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=cb8dffb84978e741d6c1ce408163e837`
       );
       setWeatherData(response.data);
       console.log(response.data); //You can see all the weather data in console log
@@ -19,7 +19,7 @@ const Weather = () => {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  });
 
   const handleInputChange = (e) => {
     setCity(e.target.value);
@@ -39,7 +39,7 @@ const Weather = () => {
           value={city}
           onChange={handleInputChange}
         />
-        <button type="submit">Get Weather</button>
+        <button type="submit">Get Weather Forecast</button>
       </form>
       {weatherData ? (
         <>
